@@ -19,9 +19,15 @@ def create_app():
 
         :return: Flask response
         """
-        return '<h1>Hello World!</h1>'
+        return '<h1>Hello World! This is Mark.</h1>'
 
     return app
 
 if __name__ == "__main__":
-    create_app()
+
+    # If using gunicorn
+    # create_app()
+    # $ gunicorn -c gunicorn.py "hello.app:create_app()"
+    #
+    # Below runs without gunicorn
+    create_app().run(debug=True)
