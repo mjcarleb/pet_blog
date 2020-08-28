@@ -1,4 +1,4 @@
 from puppycompanyblog import app
 
-if __name__ == "__main__":
-    app.run(debug=True)
+def create_app():
+    return app
