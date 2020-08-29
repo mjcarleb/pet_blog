@@ -17,7 +17,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: mjcarleb/acg-web:0.1
+      - image: mjcarleb/udemy_blog:0.10
         name: web-ctr
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
