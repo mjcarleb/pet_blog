@@ -1,3 +1,10 @@
+# CITES
+- This repo is based almost entirely on these 4 online classes
+    - Udemy class on Flask and Python (by Jose Portilla)
+    - A Cloud Guru class on Docker Fundamentals (by Nick Janetakis)
+    - A Cloud Guru class on EKS Basics (by Faye Ellis)
+    - A Cloud Guru class on Kubernetes Deep Dive (by Nigel Poulton)
+
 # Flask
 
 This Flask application has 2 key differences from the demo app in the course:
