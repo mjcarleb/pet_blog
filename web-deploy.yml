@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-pv-claim
+  name: my-pv-data
   labels:
     app: web
 spec:
@@ -9,7 +9,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi
+      storage: 15Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -30,14 +30,14 @@ spec:
         app: web
     spec:
       containers:
-      - image: mjcarleb/pet_blog_writer:0.1
+      - image: mjcarleb/pet_blog_writer:1.1
         name: web-ctr
         ports:
         - containerPort: 5000
         volumeMounts:
         - name:  my-persistent-storage
-          mountPath:  /app
+          mountPath: /data
       volumes:
         - name: my-persistent-storage
           persistentVolumeClaim:
-            claimName:  my-pv-claim
+            claimName:  my-pv-data

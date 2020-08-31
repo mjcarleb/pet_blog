@@ -12,4 +12,10 @@ def index():
 
 @core.route("/info")
 def info():
-    return render_template("info.html")
+
+    with open("../data/flask_info.txt", "a") as f:
+        f.write("Call to info \n")
+    with open("../data/flask_info.txt", "r") as f:
+        l=f.readlines()
+    #return render_template("info.html")
+    return f'<h1>number of lines:  {len(l)}</h1>'
